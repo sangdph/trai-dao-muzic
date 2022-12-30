@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="root">
+      <header>
+        <h1 class="text-header">TRÁI ĐÀO MUZIC</h1>
+        <div class="email-header">sangdph@gmail.com</div>
+      </header>
+      <content>
+        <div class="search">
+          <input
+            id="search-input"
+            type="text"
+            data-thoiGianDoi="1500"
+            data-chu='["Chào em ^_^", "htdngan@gmail.com", "Tối mát mẻ nha em", "Ráng học i nha", "Cố lên", "Thi xong hết dẫn đi nhậu"]'
+          />
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+      </content>
+      <div class="main">
+        <div class="list-music">
+          <div class="item-music">
+            <img
+              class="picture-music"
+              src="https://avatar-ex-swe.nixcdn.com/song/share/2021/05/28/b/6/6/3/1622209481633.jpg"
+              alt=""
+            />
+            <div class="name-music">Em là hoàng hôn - Vang x Cloud 5 sang</div>
+            <a
+              href="http://api.mp3.zing.vn/api/streaming/audio/ZZ9DO777/320"
+              download=""
+              ><i
+                class="fa-regular fa-circle-down download"
+                style="color: green"
+              ></i
+            ></a>
+          </div>
+
+          <div class="item-music">
+            <img
+              class="picture-music"
+              src="https://avatar-ex-swe.nixcdn.com/song/share/2019/12/23/c/b/b/9/1577088222037.jpg"
+              alt=""
+            />
+            <div class="name-music">Cầu hôn(Xmas Version) - văn Mai Hương</div>
+            <a
+              href="http://api.mp3.zing.vn/api/streaming/audio/ZZC0U0ZB/320"
+              download=""
+              ><i
+                class="fa-regular fa-circle-down download"
+                style="color: green"
+              ></i
+            ></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./hieu_ung_chu.js"></script>
+    <!-- <script src="./index.js"></script> -->
+    <script src="./sang.js"></script>
+  </body>
+</html>
