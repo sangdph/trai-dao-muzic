@@ -41,10 +41,17 @@ hieu_ung_danh_chu.prototype.ham_danh_chu = function () {
 
 document.addEventListener("DOMContentLoaded", chay_ham);
 
+const the_html_chua_chu = document.querySelector("#search-input");
 function chay_ham() {
-  const the_html_chua_chu = document.querySelector("#search-input");
   const chu = JSON.parse(the_html_chua_chu.getAttribute("data-chu"));
   const thoiGianDoi = the_html_chua_chu.getAttribute("data-thoiGianDoi");
   //Thiết Lập hàm hieu_ung _danh_chu
   new hieu_ung_danh_chu(the_html_chua_chu, chu, thoiGianDoi);
 }
+
+the_html_chua_chu.addEventListener("focus", (e) => {
+  hieu_ung_danh_chu.prototype.ham_danh_chu = function () {
+    console.log("conga");
+  };
+  the_html_chua_chu.placeholder = "";
+});

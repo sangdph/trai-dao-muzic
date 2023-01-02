@@ -27,6 +27,7 @@ function render(item) {
 }
 
 async function getSongs(link = endpoint) {
+  // console.log(2);
   const response = await fetch(`${link}`);
   const data = await response.json();
   const dataMusic = [...data.status];
@@ -59,9 +60,22 @@ filterInput.addEventListener(
     // const response = await fetch(`${endpoint}?title_like=${e.target.value}`);
     // const data = await response.json();
     // console.log(data);
-    const path = `${endpoint}/search?song=${e.target.value}`;
-    getSongs(path);
+    console.log(e.target.value);
+    if (e.target.value !== "") {
+      // console.log(1);
+      const path = `${endpoint}/search?song=${e.target.value}`;
+      getSongs(path);
+    }
   }, 500)
 );
 
 // getSongs();
+
+function search() {
+  const keyWord = document.querySelector("#search-input");
+  console.log(keyWord.value);
+  if (keyWord.value !== "") {
+    const path = `${endpoint}/search?song=${keyWord.value}`;
+    getSongs(path);
+  }
+}
